@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>服装加工厂订单管理系统</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="receiveOrderInfoFinish.css">
+</head>
+
+<body>
+    <div id="navigationDiv1">
+        <ul id="navigationUl1">
+            <li id="navigationLi1">
+                <a id="navigationA1" href="https://www.bilibili.com/video/BV1GJ411x7h7/">退出</a>
+            </li>
+            <li id="navigationLi1">
+                <a id="navigationA1" href="https://www.bilibili.com/video/BV1GJ411x7h7/">我的</a>
+            </li>
+            <li id="navigationTitle">
+                <p id="name">服装加工厂订单管理系统</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="navigationBlock">
+        <div id="navigationDiv2">
+            <ul id="navigationBar2">
+                <li>
+                    <a href="../newOrder/newOrder.html">发起订单</a>
+                </li>
+                <li>
+                    <a class="active" href="../handleOrder/handleOrder.html">管理订单</a>
+                </li>
+                <li>
+                    <a href="../creditRating/creditRating.html">信用评级</a>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <button id="backToNewOrder" type="button" class="layui-btn layui-btn-normal"
+                onClick="location.href='../handleOrder/handleOrder.html'">返回上级</button>
+            <div id="orderInformation">
+                <div id="titleAndNumber">
+                    <p id="title">管理订单 > 订单详情</p>
+                    <!-- <p id="number"><br>订单编号：10001<br><br></p> -->
+                </div>
+
+
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="200">
+                        <col>
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>订单编号</th>
+                            <th>R10003</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>订单标题</td>
+                            <td>静谧午夜 DN0002</td>
+                        </tr>
+                        <tr>
+                            <td>交易对象</td>
+                            <td>玛尔特</td>
+                        </tr>
+                        <tr>
+                            <td>货物单价</td>
+                            <td>487.53元/件</td>
+                        </tr>
+                        <tr>
+                            <td>交易数量</td>
+                            <td>10000件</td>
+                        </tr>
+                        <tr>
+                            <td>提交时间</td>
+                            <td>2021-02-08</td>
+                        </tr>
+                        <tr>
+                            <td>完成时间</td>
+                            <td>\</td>
+                        </tr>
+                        <tr>
+                            <td>订单金额</td>
+                            <td>4875300元</td>
+                        </tr>
+                        <tr>
+                            <td>订单状态</td>
+                            <td>未完成</td>
+                        </tr>
+                        <tr>
+                            <td>预期利润</td>
+                            <td>75000元</td>
+                        </tr>
+                        <tr>
+                            <td>实际利润</td>
+                            <td>\</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="..layui/layui.js"></script>
+
+</body>
+
+</html>

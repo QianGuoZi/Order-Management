@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>服装加工厂订单管理系统</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="creditRating.css">
+</head>
+
+<body>
+    <div id="navigationDiv1">
+        <ul id="navigationUl1">
+            <li id="navigationLi1">
+                <a id="navigationA1" href="https://www.bilibili.com/video/BV1GJ411x7h7/">退出</a>
+            </li>
+            <li id="navigationLi1">
+                <a id="navigationA1" href="https://www.bilibili.com/video/BV1GJ411x7h7/">我的</a>
+            </li>
+            <li id="navigationTitle">
+                <p id="name">服装加工厂订单管理系统</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="navigationBlock">
+        <div id="navigationDiv2">
+            <ul id="navigationBar2">
+                <li id="navigationLi2">
+                    <a href="../newOrder/newOrder.html">发起订单</a>
+                </li>
+                <li id="navigationLi2">
+                    <a href="../handleOrder/handleOrder.html">管理订单</a>
+                </li>
+                <li id="navigationLi2">
+                    <a class="active" href="../creditRating/creditRating.html">信用评级</a>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="myOrderList">
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">供货商</li>
+                        <li>客户</li>
+                    </ul>
+                    
+
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <table class="layui-hide" id="demo1" lay-filter="test1"></table>
+
+                            <script src="../layui/layui.js" charset="utf-8"></script>
+                            <!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
+                            <script>
+                                layui.use('table', function () {
+                                    var table = layui.table;
+
+                                    //展示已知数据
+                                    table.render({
+                                        elem: '#demo1'
+                                        , cols: [[ //标题栏
+                                            { field: 'id', title: '序号', width: 80 }
+                                            , { field: 'name', title: '公司名称', width: 300 }
+                                            , { field: 'P', title: 'P值', width: 120, sort: true }
+                                            , { field: 'Pz', title: 'P', Width: 120, sort: true }
+                                            , { field: 'C', title: 'C值', Width: 120, sort: true }
+                                            , { field: 'Cz', title: 'C', width: 120, sort: true }
+                                            , { field: 'level', title: '评级', width: 100, sort: true }
+                                        ]]
+                                        , data: [{
+                                            "id": "1"
+                                            , "name": "枝江嘉乐布料厂"
+                                            , "P": "78"
+                                            , "C": "89"
+                                            , "Pz": "低"
+                                            , "Cz": "高"
+                                            , "level": "B"
+                                        }, {
+                                            "id": "2"
+                                            , "name": "凛冬服饰配件厂"
+                                            , "P": "89"
+                                            , "C": "96"
+                                            , "Pz": "高"
+                                            , "Cz": "高"
+                                            , "level": "A"
+                                        }, {
+                                            "id": "3"
+                                            , "name": "哥伦比亚布料厂"
+                                            , "P": "64"
+                                            , "C": "76"
+                                            , "Pz": "低"
+                                            , "Cz": "低"
+                                            , "level": "D"
+                                        }, {
+                                            "id": "4"
+                                            , "name": "龙门毛线厂"
+                                            , "P": "86"
+                                            , "C": "76"
+                                            , "Pz": "高"
+                                            , "Cz": "低"
+                                            , "level": "C"
+                                        }]
+                                        //,skin: 'line' //表格风格
+                                        , even: true
+                                        //,page: true //是否显示分页
+                                        //,limits: [5, 7, 10]
+                                        //,limit: 5 //每页默认显示的数量
+                                    });
+                                    table.on('row(test1)', function (obj) {
+                                        console.log(obj.tr) //得到当前行元素对象
+                                        console.log(obj.data) //得到当前行数据
+                                        //obj.del(); //删除当前行
+                                        //obj.update(fields) //修改当前行数据
+                                        //跳转到详情界面
+                                        window.location.href = "../creditInfoFac/creditInfoFac.html";
+                                    });
+                                });
+
+                            </script>
+                        </div>
+
+
+
+                        <div class="layui-tab-item">
+                            <table class="layui-hide" id="demo2" lay-filter="test2"></table>
+
+                            <script src="../layui/layui.js" charset="utf-8"></script>
+                            <!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
+                            <script>
+                                layui.use('table', function () {
+                                    var table = layui.table;
+
+                                    //展示已知数据
+                                    table.render({
+                                        elem: '#demo2'
+                                        , cols: [[ //标题栏
+                                            { field: 'id', title: '序号', width: 60 }
+                                            , { field: 'name', title: '公司名称', width: 150 }
+                                            , { field: 'Rz', title: 'R值', width: 90, sort: true }
+                                            , { field: 'R', title: 'R', width: 90, sort: true }
+                                            , { field: 'Fz', title: 'F值', Width: 90, sort: true }
+                                            , { field: 'F', title: 'F', Width: 90, sort: true }
+                                            , { field: 'Mz', title: 'M值', Width: 140, sort: true }
+                                            , { field: 'M', title: 'M', Width: 90, sort: true }
+                                            , { field: 'Cz', title: 'C值', width: 90, sort: true }
+                                            , { field: 'C', title: 'C', width: 90, sort: true }
+                                            , { field: 'level', title: '评级', width: 80, sort: true }
+                                        ]]
+                                        , data: [{
+                                            "id": "1"
+                                            , "name": "海澜 's Home"
+                                            , "Rz": "49"
+                                            , "R": "低"
+                                            , "Fz": "2"
+                                            , "F": "低"
+                                            , "Mz": "6170000"
+                                            , "M": "低"
+                                            , "Cz": "66"
+                                            , "C": "低"
+                                            , "level": "H-"
+                                        }, {
+                                            "id": "2"
+                                            , "name": "斗争血脉"
+                                            , "Rz": "8"
+                                            , "R": "高"
+                                            , "Fz": "6"
+                                            , "F": "高"
+                                            , "Mz": "9754840"
+                                            , "M": "高"
+                                            , "Cz": "85"
+                                            , "C": "高"
+                                            , "level": "A"
+                                        }, {
+                                            "id": "3"
+                                            , "name": "玛尔特"
+                                            , "Rz": "10"
+                                            , "R": "高"
+                                            , "Fz": "3"
+                                            , "F": "低"
+                                            , "Mz": "7548400"
+                                            , "M": "低"
+                                            , "Cz": "88"
+                                            , "C": "高"
+                                            , "level": "D-"
+                                        }, {
+                                            "id": "4"
+                                            , "name": "时代"
+                                            , "Rz": "4"
+                                            , "R": "高"
+                                            , "Fz": "7"
+                                            , "F": "高"
+                                            , "Mz": "9954740"
+                                            , "M": "高"
+                                            , "Cz": "79"
+                                            , "C": "低"
+                                            , "level": "C"
+                                        }, {
+                                            "id": "5"
+                                            , "name": "生命之地"
+                                            , "Rz": "13"
+                                            , "R": "低"
+                                            , "Fz": "10"
+                                            , "F": "高"
+                                            , "Mz": "13754840"
+                                            , "M": "高"
+                                            , "Cz": "90"
+                                            , "C": "高"
+                                            , "level": "A-"
+                                            
+                                        }, {
+                                            "id": "6"
+                                            , "name": "珊瑚海岸"
+                                            , "Rz": "1"
+                                            , "R": "高"
+                                            , "Fz": "1"
+                                            , "F": "低"
+                                            , "Mz": "78400"
+                                            , "M": "低"
+                                            , "Cz": "65"
+                                            , "C": "低"
+                                            , "level": "H"
+                                        }]
+                                        //,skin: 'line' //表格风格
+                                        , even: true
+                                        //,page: true //是否显示分页
+                                        //,limits: [5, 7, 10]
+                                        //,limit: 5 //每页默认显示的数量
+                                    });
+                                    table.on('row(test2)', function (obj) {
+                                        console.log(obj.tr) //得到当前行元素对象
+                                        console.log(obj.data) //得到当前行数据
+                                        //obj.del(); //删除当前行
+                                        //obj.update(fields) //修改当前行数据
+                                        //跳转到详情界面
+                                        window.location.href = "../creditInfo/creditInfo.html";
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../layui/layui.js"></script>
+
+</body>
+
+</html>

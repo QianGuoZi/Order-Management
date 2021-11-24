@@ -1,0 +1,136 @@
+/* html,body{
+    width: 100%;
+    height: 100%;
+} */
+#navigationDiv1 {
+    /* position: fixed; */
+    margin: 0;
+}
+
+#navigationUl1 {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    overflow: hidden;
+    background-color: #2b6dbb;
+    list-style-type: none;
+}
+
+#navigationTitle {
+    float: left;
+    padding-top: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 40px;
+}
+
+#name {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+}
+
+#navigationLi1 {
+    float: right;
+    text-align: center;
+    /* padding-left: 30px; */
+    padding-right: 30px;
+}
+
+#navigation :first-child {
+    border-right: none;
+}
+
+#navigationA1 {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 38px;
+}
+
+#navigationBlock {
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#navigationDiv2 {
+    /* position: fixed; */
+    height: 100%;
+    flex: 1;
+}
+
+#navigationBar2 {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #378bee;
+}
+
+
+#navigationBar2 a {
+    display: block;
+    color: white;
+    padding: 25px 16px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#navigationBar2 a.active {
+    background-color: #2b6dbb;
+    color: white;
+}
+
+#navigationBar2 a:hover :not(.active) {
+    background-color: #2b6dbb;
+    color: white;
+}
+
+#content {
+    /* flex:1; */
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: white;
+}
+
+#backToNewOrder {
+    align-self: flex-start;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#orderInformation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 230px;
+    margin-right: 230px;
+    /* margin-top: 30px; */
+    height: 100%;
+    background-color: white;
+}
+
+#title {
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#allOrder {
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+}
